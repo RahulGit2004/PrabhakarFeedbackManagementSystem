@@ -1,5 +1,7 @@
 Feedback Management System:
-    Requirements:
+
+Requirements:
+
         * A user can signup using with admin or student role.  (Done)
         * Admin can create a batch.(done)
         * Admin can assign a batch to a student. (Done)
@@ -8,9 +10,11 @@ Feedback Management System:
         * The admin can see the feedback of a individual student as well.
         * The admin should be able to see all the feedbacks of students batchwise.
 
+
 Implimentation:
 
 1.Entity
+
     a. Student
             //attributes
                 name
@@ -66,6 +70,7 @@ Implimentation:
             //getter & setter
                 
 2.UiClient
+
     a.StudentUiClient
         signup(name,phoneNumber,password,"student")   -----> call Controller signup function.
         signin(phoneNumber,password,"student")        -----> call Controller signin function.
@@ -78,6 +83,7 @@ Implimentation:
 
 
 3.Controller
+
     a.Controller
         //attributes
             object of Service
@@ -89,6 +95,7 @@ Implimentation:
             void assignBatch(adminPhoneNumber,studentPhoneNumber,bId)   -----> call Service assignBatch() function.
 
 4.Service
+
     a.Service
         //attributes
             object of StudentRepository.
@@ -104,6 +111,7 @@ Implimentation:
            
 
 5.Repository
+
     a.StudentRepository
         //attributes
             list<student>
@@ -113,7 +121,7 @@ Implimentation:
             void save(Student obj)                      ----> it will add obj in the list appropriate list according to role provided.
             Student fetchStudent(studentPhoneNumber)    ----> It will search student from list and returns it.
     
-    c.AdminRepository
+    b.AdminRepository
         //attributes
             list<Admin>
 
@@ -122,7 +130,7 @@ Implimentation:
             Admin fetchAdmin(AdminPhoneNumber)          ----> It will search admin from list and return it.
             boolean isAdmin(adminPhoneNumber)           ----> searches for admin and return true if found.
 
-    b. BatchRepository
+    c. BatchRepository
         //attributes
             list<Batch>
 
