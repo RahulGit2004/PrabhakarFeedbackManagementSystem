@@ -5,7 +5,7 @@ Requirements:
         * A user can signup using with admin or student role.  (Done)
         * Admin can create a batch.(done)
         * Admin can assign a batch to a student. (Done)
-        * An admin user can create/edit/delete questions for feedback for different batches.
+        * An admin user can create/edit/delete questions for feedback for different batches. (In Progress)
         * A student can see all the feedbacks for his assigned batch and submit the feedback.
         * The admin can see the feedback of a individual student as well.
         * The admin should be able to see all the feedbacks of students batchwise.
