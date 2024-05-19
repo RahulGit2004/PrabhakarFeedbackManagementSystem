@@ -48,7 +48,7 @@ public class Batch {
         this.feedbackList = feedbackList;
     }
 
-    public void addStudentToBatch(Student student){
+    public void addStudent(Student student){
         studentList.add(student);
     }
 }
