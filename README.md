@@ -78,7 +78,7 @@ Implimentation:
                 
 2.UiClient
 
-    a.StudentUiClient
+    a.UiClient
     
         signup(name,phoneNumber,password,"student"/"admin")   -----> call Controller signup function.
         signin(phoneNumber,password,"student"/"admin")        -----> call Controller signin function.
