@@ -108,10 +108,10 @@ Implimentation:
             object of BatchRepository.
 
         //behavior
-            void signup(name,phoneNumber,password,role)             ----> create an appropriate object and save it in the  repository  by calling save() function of respective repository.
+            void signup(name,phoneNumber,password,role)             ----> create an appropriate object and save it in the respective repository  by calling save() function of the repository.
             boolean signin(phoneNumber,password,role)               ----> fetch matching phoneNumber user from respective Repository and match password . after succesfull authentication return true.
-            void createBatch(adminPhoneNumber,batchName,bId)        ----> authenticate admin then create a batch object and call save() of BatchRepository.
-            void assignBatch(adminPhoneNumber,studentPhoneNumber,bId)   ----> authenticate admin then fetch the matching student and set its batch and call addStudentToBatch() of BatchRepository.
+            void createBatch(adminPhoneNumber,batchName,bId)        ----> authenticate admin then create a batch object and  save in BatchRepository by calling save() function of the repository.
+            void assignBatch(adminPhoneNumber,studentPhoneNumber,bId)   ----> authenticate admin then fetch the matching student and set its batch and add student in the batch's studentList by calling addStudentToBatch() of BatchRepository.
 
            
 
