@@ -76,10 +76,10 @@ Implimentation:
         signin(phoneNumber,password,"student")        -----> call Controller signin function.
 
     b.AdminUiClient
-        signup(name,phoneNumber,password,"admin")                   -----> call Controller signup function.
-        signin(phoneNumber,password,"admin")                        -----> call Controller signin function.
-        createBatch(AdminPhoneNumber)                       -----> call Controller createBatch function.
-        assignBatch(AdminPhoneNumber,StudentPhoneNumber)    -----> call Controller assingBatch function.
+        signup(name,phoneNumber,password,"admin")     -----> call Controller signup function.
+        signin(phoneNumber,password,"admin")          -----> call Controller signin function.
+        createBatch(AdminPhoneNumber)                 -----> call Controller createBatch function.
+        assignBatch(AdminPhoneNumber,StudentPhoneNumber)  -----> call Controller assingBatch function.
 
 
 3.Controller
