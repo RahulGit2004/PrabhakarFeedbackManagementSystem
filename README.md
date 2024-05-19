@@ -82,8 +82,8 @@ Implimentation:
     
         signup(name,phoneNumber,password,"student"/"admin")   -----> call Controller signup function.
         signin(phoneNumber,password,"student"/"admin")        -----> call Controller signin function.
-        createBatch(AdminPhoneNumber)                         -----> call Controller createBatch function.
-        assignBatch(AdminPhoneNumber,StudentPhoneNumber)      -----> call Controller assingBatch function.
+        createBatch(AdminPhoneNumber,batchName,batchId)                         -----> call Controller createBatch function.
+        assignBatch(AdminPhoneNumber,StudentPhoneNumber,batchId)      -----> call Controller assingBatch function.
 
 3.Controller
 
