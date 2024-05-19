@@ -16,6 +16,7 @@ Implimentation:
 1.Entity
 
     a. Student
+    
             //attributes
                 name
                 phoneNumber
@@ -31,6 +32,7 @@ Implimentation:
             //getter & setter
 
     b. Admin
+    
             //attributes
                 name
                 phoneNumber
@@ -43,6 +45,7 @@ Implimentation:
             //getter & setter
     
     c. Batch
+    
         //attributes
             name
             bId
@@ -55,6 +58,7 @@ Implimentation:
               void addStudent(student object)  ----> It will add a student in the studentList of the batch
 
     d. Feedback
+    
             //attributes
                 fID
                 studentPhoneNumber
@@ -64,6 +68,7 @@ Implimentation:
             //getter & setter
 
     e. Question
+    
             //attributes
                 qID
                 question
@@ -74,19 +79,16 @@ Implimentation:
 2.UiClient
 
     a.StudentUiClient
-        signup(name,phoneNumber,password,"student")   -----> call Controller signup function.
-        signin(phoneNumber,password,"student")        -----> call Controller signin function.
-
-    b.AdminUiClient
-        signup(name,phoneNumber,password,"admin")     -----> call Controller signup function.
-        signin(phoneNumber,password,"admin")          -----> call Controller signin function.
-        createBatch(AdminPhoneNumber)                 -----> call Controller createBatch function.
-        assignBatch(AdminPhoneNumber,StudentPhoneNumber)  -----> call Controller assingBatch function.
-
+    
+        signup(name,phoneNumber,password,"student"/"admin")   -----> call Controller signup function.
+        signin(phoneNumber,password,"student"/"admin")        -----> call Controller signin function.
+        createBatch(AdminPhoneNumber)                         -----> call Controller createBatch function.
+        assignBatch(AdminPhoneNumber,StudentPhoneNumber)      -----> call Controller assingBatch function.
 
 3.Controller
 
     a.Controller
+    
         //attributes
             object of Service
             
@@ -99,6 +101,7 @@ Implimentation:
 4.Service
 
     a.Service
+    
         //attributes
             object of StudentRepository.
             object of AdminRepository.
@@ -115,6 +118,7 @@ Implimentation:
 5.Repository
 
     a.StudentRepository
+    
         //attributes
             list<student>
             
@@ -124,6 +128,7 @@ Implimentation:
             Student fetchStudent(studentPhoneNumber)    ----> It will search student from list and returns it.
     
     b.AdminRepository
+    
         //attributes
             list<Admin>
 
@@ -133,6 +138,7 @@ Implimentation:
             boolean isAdmin(adminPhoneNumber)           ----> searches for admin and return true if found.
 
     c. BatchRepository
+    
         //attributes
             list<Batch>
 
