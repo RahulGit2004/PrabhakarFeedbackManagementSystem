@@ -51,6 +51,8 @@ Implimentation:
 
         //constructor
             Batch(name,bId)
+       //behavior
+              void addStudent(student object)  ----> It will add a student in the studentList of the batch
 
     d. Feedback
             //attributes
