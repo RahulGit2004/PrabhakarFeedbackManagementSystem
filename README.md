@@ -12,6 +12,7 @@ Implimentation:
 
 1.Entity
     a. Student
+
             //attributes
                 name
                 phoneNumber
@@ -27,6 +28,7 @@ Implimentation:
             //getter & setter
 
     b. Admin
+
             //attributes
                 name
                 phoneNumber
@@ -39,6 +41,7 @@ Implimentation:
             //getter & setter
     
     c. Batch
+
         //attributes
             name
             bId
@@ -49,6 +52,7 @@ Implimentation:
             Batch(name,bId)
 
     d. Feedback
+
             //attributes
                 fID
                 studentPhoneNumber
@@ -58,6 +62,7 @@ Implimentation:
             //getter & setter
 
     e. Question
+
             //attributes
                 qID
                 question
@@ -66,7 +71,9 @@ Implimentation:
             //getter & setter
                 
 2.UiClient
+
     a.UiClient
+
         signup(name,phoneNumber,password,"student"/"admin")   -----> call Controller signup function.
         signin(phoneNumber,password,"student"/"admin")        -----> call Controller signin function.
         createBatch(AdminPhoneNumber)                         -----> call Controller createBatch function.
@@ -76,7 +83,9 @@ Implimentation:
 
 
 3.Controller
+
     a.Controller
+
         //attributes
             object of Service
             
@@ -87,7 +96,9 @@ Implimentation:
             void assignBatch(adminPhoneNumber,studentPhoneNumber,bId)   -----> call Service assignBatch() function.
 
 4.Service
+
     a.Service
+
         //attributes
             object of StudentRepository.
             object of AdminRepository.
@@ -102,7 +113,9 @@ Implimentation:
            
 
 5.Repository
+
     a.StudentRepository
+
         //attributes
             list<student>
             
@@ -112,6 +125,7 @@ Implimentation:
             Student fetchStudent(studentPhoneNumber)    ----> It will search student from list and returns it.
     
     c.AdminRepository
+
         //attributes
             list<Admin>
 
@@ -121,6 +135,7 @@ Implimentation:
             boolean isAdmin(adminPhoneNumber)           ----> searches for admin and true if found.
 
     b. BatchRepository
+
         //attributes
             list<Batch>
 

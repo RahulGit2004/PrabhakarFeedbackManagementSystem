@@ -6,7 +6,7 @@ import feedbackManagementSystem.controller.Controller;
 public class UiClient {
     public static void main(String[] args) {
         Controller controller=new Controller();
-        System.out.println("hello");
+
 
         //Populate some admin
         populateAdmin(controller);
