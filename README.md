@@ -145,6 +145,7 @@ Implimentation:
         //behavior 
             void save(Batch obj)                     ----> It will add the obj in the batch list.
             void addStudentToBatch(Student obj,bId)  ----> It will add the student in respective batch's students list.
+            Batch fetchBatch(String bId)             ----> It will search the matching batch and return it.
 
     
     
