@@ -19,6 +19,7 @@ public class UiClient {
         controller.creatBatch("7348891347","Cage-3","c3");
 
         controller.assignBatch("7348891347","9798825716","c1");
+        controller.assignBatch("7348891347","7050577303","c1");
 
     }
 
