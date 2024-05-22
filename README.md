@@ -1,22 +1,17 @@
 Feedback Management System:
-
-Requirements:
-
+    Requirements:
         * A user can signup using with admin or student role.  (Done)
         * Admin can create a batch.(done)
         * Admin can assign a batch to a student. (Done)
-        * An admin user can create/edit/delete questions for feedback for different batches. (In Progress)
+        * An admin user can create/edit/delete questions for feedback for different batches.
         * A student can see all the feedbacks for his assigned batch and submit the feedback.
         * The admin can see the feedback of a individual student as well.
         * The admin should be able to see all the feedbacks of students batchwise.
 
-
 Implimentation:
 
 1.Entity
-
     a. Student
-    
             //attributes
                 name
                 phoneNumber
@@ -32,7 +27,6 @@ Implimentation:
             //getter & setter
 
     b. Admin
-    
             //attributes
                 name
                 phoneNumber
@@ -45,7 +39,6 @@ Implimentation:
             //getter & setter
     
     c. Batch
-    
         //attributes
             name
             bId
@@ -54,11 +47,8 @@ Implimentation:
 
         //constructor
             Batch(name,bId)
-       //behavior
-              void addStudent(student object)  ----> It will add a student in the studentList of the batch
 
     d. Feedback
-    
             //attributes
                 fID
                 studentPhoneNumber
@@ -68,7 +58,6 @@ Implimentation:
             //getter & setter
 
     e. Question
-    
             //attributes
                 qID
                 question
@@ -77,48 +66,43 @@ Implimentation:
             //getter & setter
                 
 2.UiClient
-
     a.UiClient
-    
         signup(name,phoneNumber,password,"student"/"admin")   -----> call Controller signup function.
         signin(phoneNumber,password,"student"/"admin")        -----> call Controller signin function.
-        createBatch(AdminPhoneNumber,batchName,batchId)                         -----> call Controller createBatch function.
-        assignBatch(AdminPhoneNumber,StudentPhoneNumber,batchId)      -----> call Controller assingBatch function.
+        createBatch(AdminPhoneNumber)                         -----> call Controller createBatch function.
+        assignBatch(AdminPhoneNumber,StudentPhoneNumber)      -----> call Controller assingBatch function.
+
+
+
 
 3.Controller
-
     a.Controller
-    
         //attributes
             object of Service
             
         //behavior
-            void signup(name,phoneNumber,password,role)                 -----> call Service signup() function.
-            boolean signin(phoneNumber,password)                        -----> call Service signin() functon.
-            void createBatch(adminPhoneNumber,batchName,bId)            -----> call service createBatch() function.
+            void signup(name,phoneNumber,password,role)             -----> call Service signup() function.
+            boolean signin(phoneNumber,password)                    -----> call Service signin() functon.
+            void createBatch(adminPhoneNumber,batchName,bId)                      -----> call service createBatch() function.
             void assignBatch(adminPhoneNumber,studentPhoneNumber,bId)   -----> call Service assignBatch() function.
 
 4.Service
-
     a.Service
-    
         //attributes
             object of StudentRepository.
             object of AdminRepository.
             object of BatchRepository.
 
         //behavior
-            void signup(name,phoneNumber,password,role)             ----> create an appropriate object and save it in the respective repository  by calling save() function of the repository.
+            void signup(name,phoneNumber,password,role)             ----> create an appropriate object and save it in the  repository  by calling save() function of respective repository.
             boolean signin(phoneNumber,password,role)               ----> fetch matching phoneNumber user from respective Repository and match password . after succesfull authentication return true.
-            void createBatch(adminPhoneNumber,batchName,bId)        ----> authenticate admin then create a batch object and  save in BatchRepository by calling save() function of the repository.
-            void assignBatch(adminPhoneNumber,studentPhoneNumber,bId)   ----> authenticate admin then fetch the matching student and set its batch and add student in the batch's studentList by calling addStudentToBatch() of BatchRepository.
+            void createBatch(adminPhoneNumber,batchName,bId)                      ----> authenticate admin then create a batch object and call save() of BatchRepository.
+            void assignBatch(adminPhoneNumber,studentPhoneNumber,bId)   ----> authenticate admin then fetch the matching student and set its batch and call addStudentToBatch() of BatchRepository.
 
            
 
 5.Repository
-
     a.StudentRepository
-    
         //attributes
             list<student>
             
@@ -127,25 +111,23 @@ Implimentation:
             void save(Student obj)                      ----> it will add obj in the list appropriate list according to role provided.
             Student fetchStudent(studentPhoneNumber)    ----> It will search student from list and returns it.
     
-    b.AdminRepository
-    
+    c.AdminRepository
         //attributes
             list<Admin>
 
         //behavior
-            void save(Admin obj)                        ----> it will add obj in the list appropriate list according to role provided.
+            void save(Admin obj)                      ----> it will add obj in the list appropriate list according to role provided.
             Admin fetchAdmin(AdminPhoneNumber)          ----> It will search admin from list and return it.
-            boolean isAdmin(adminPhoneNumber)           ----> searches for admin and return true if found.
+            boolean isAdmin(adminPhoneNumber)           ----> searches for admin and true if found.
 
-    c. BatchRepository
-    
+    b. BatchRepository
         //attributes
             list<Batch>
 
         //behavior 
-            void save(Batch obj)                     ----> It will add the obj in the batch list.
+            void save(Batch obj)           ----> It will add the obj in the batch list.
+            Batch fetchBatch(String bId)   ----> It will return the matching batch obj.
             void addStudentToBatch(Student obj,bId)  ----> It will add the student in respective batch's students list.
-            Batch fetchBatch(String bId)             ----> It will search the matching batch and return it.
 
     
     
