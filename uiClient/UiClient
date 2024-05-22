@@ -20,6 +20,18 @@ public class UiClient {
 
         controller.assignBatch("7348891347","9798825716","c1");
         controller.assignBatch("7348891347","7050577303","c1");
+        controller.assignBatch("7348891347","7463890034","c1");
+        controller.assignBatch("7348891347","9472683541","c1");
+        controller.assignBatch("7348891347","9113170895","c1");
+        controller.assignBatch("7348891347","9142202033","c2");
+        controller.assignBatch("7348891347","8987211979","c2");
+        controller.assignBatch("7348891347","9546468148","c2");
+        controller.assignBatch("7348891347","9525588208","c2");
+        controller.assignBatch("7348891347","9576219441","c2");
+        controller.assignBatch("7348891347","8809208891","c3");
+        controller.assignBatch("7348891347","1234567890","c3");
+        controller.assignBatch("7348891347","7644844528","c3");
+        controller.assignBatch("7348891347","7493991930","c3");
 
     }
 
