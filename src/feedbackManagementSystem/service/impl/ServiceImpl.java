@@ -3,6 +3,7 @@ package feedbackManagementSystem.service.impl;
 import feedbackManagementSystem.entity.Admin;
 import feedbackManagementSystem.entity.Batch;
 import feedbackManagementSystem.entity.Student;
+import feedbackManagementSystem.entity.Question;
 import feedbackManagementSystem.service.Service;
 
 public class ServiceImpl implements Service {
@@ -68,4 +69,16 @@ public class ServiceImpl implements Service {
         else
             System.out.println("cannot assign");
     }
+
+    public void createQuestion(String question,String qId){
+
+        Question newQuestion=new Question(question,qId);
+        questionRepo.save(newQuestion);
+    }
+
+
+    public void createFeedback(String fId) {
+
+    }
+
 }

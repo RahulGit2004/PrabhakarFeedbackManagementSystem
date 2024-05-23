@@ -21,4 +21,12 @@ public class Controller {
    public void assignBatch(String adminPhoneNumber,String studentPhoneNumber,String bId){
         service.assignBatch(adminPhoneNumber,studentPhoneNumber,bId);
     }
+
+    public void createQuestion(String question,String qId){
+       service.createQuestion(question,qId);
+    }
+
+    public void createFeedback(String fId){
+       service.createFeedback(fId);
+    }
 }

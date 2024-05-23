@@ -6,6 +6,10 @@ public class Batch {
     //attribute
     private String name;
     private String bId;
+    private String feedbackTemplateId;
+
+
+
     private ArrayList<Student> studentList= new ArrayList<>();
     private ArrayList<Feedback> feedbackList=new ArrayList<>();
 
@@ -48,6 +52,13 @@ public class Batch {
         this.feedbackList = feedbackList;
     }
 
+    public String getFeedbackTemplateId() {
+        return feedbackTemplateId;
+    }
+
+    public void setFeedbackTemplateId(String feedbackTemplateId) {
+        this.feedbackTemplateId = feedbackTemplateId;
+    }
     public void addStudent(Student student){
         studentList.add(student);
     }
